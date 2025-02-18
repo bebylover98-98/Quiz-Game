@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <!-- Google Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Welcome to the Quiz Game</h1>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="showRules()">Rules</button>
+        <button onclick="showTeam()">Team Members</button>
+        <button onclick="quitGame()">Quit Game</button>
+    </div>
+
+    <!-- Rules Screen -->
+    <div id="rules-screen" class="hidden">
+        <h2>Game Rules</h2>
+        <p>1. Warmup Round: Answer at least 2 out of 3 questions correctly to proceed.</p>
+        <p>2. Challenge Round: Answer at least 8 out of 10 questions correctly to proceed.</p>
+        <p>3. Final Round: 50 questions, 10 points per correct answer.</p>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Team Screen -->
+    <div id="team-screen" class="hidden">
+        <h2>Team Members</h2>
+        <ul>
+            <li>Ankit K. Yadav</li>
+            <li>Utsarga Bogati</li>
+            <li>Ratnadip Lekhi</li>
+            <li>Krishna Shah</li>
+            <li>Bhumiraj Yadav</li>
+            <li>Aanand Yadav</li>
+        </ul>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="hidden">
+        <h2 id="round-title"></h2>
+        <p id="question">Loading...</p>
+        <div id="answer-buttons"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
