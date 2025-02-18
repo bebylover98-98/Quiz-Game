@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Welcome to the Quiz Game</h1>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="showRules()">Rules</button>
+        <button onclick="showTeam()">Team Members</button>
+        <button onclick="quitGame()">Quit Game</button>
+    </div>
+
+    <div id="rules-screen" class="hidden">
+        <h2>Game Rules</h2>
+        <p>1. Warmup Round: Answer at least 2 out of 3 questions correctly to proceed.</p>
+        <p>2. Challenge Round: Answer at least 8 out of 10 questions correctly to proceed.</p>
+        <p>3. Final Round: 50 questions, 10 points per correct answer.</p>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="team-screen" class="hidden">
+        <h2>Team Members</h2>
+        <p>1. Ankit</p>
+        <p>2. Utsarga</p>
+        <p>3. ratnadip</p>
+        <p>4. Krishna</p>
+        <p>5. Bhumi</p>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+        <h2 id="round-title"></h2>
+        <p id="question">Loading...</p>
+        <div id="answer-buttons"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
