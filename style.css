@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 10px;
+}
+
+/* Hide Sections */
+#start-screen, #quiz-container, #rules-screen, #team-screen {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Start Screen */
+#start-screen {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#start-screen h1 {
+    font-size: 40px;
+    color: #ff7e5f;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#start-screen button {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#start-screen button:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#start-screen button:focus {
+    outline: none;
+}
+
+/* Quiz Container */
+#quiz-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+#round-title {
+    font-size: 28px;
+    color: #ff7e5f;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#question {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Answer Button Styles */
+button.answer {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.answer:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.answer:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.correct {
+    background-color: #28a745 !important;
+    box-shadow: 0 6px 15px rgba(0, 128, 0, 0.3);
+}
+
+.wrong {
+    background-color: #dc3545 !important;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Score Container */
+#score-container {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#current-score {
+    font-weight: bold;
+    font-size: 26px;
+    color: #ff7e5f;
+}
+
+/* Rules & Team Screens */
+#rules-screen, #team-screen {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+#rules-screen p, #team-screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#rules-screen button, #team-screen button {
+    background-color: #ff7e5f;
+    font-size: 20px;
+    padding: 12px 30px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#rules-screen button:hover, #team-screen button:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+button, .answer {
+    animation: bounce 0.5s ease-in-out;
+}
